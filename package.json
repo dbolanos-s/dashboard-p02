@@ -1,13 +1,16 @@
 {
-  "name": "dashboard-p02",
+  "name": "dashboard",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://dbolanos-s.github.io/dashboard",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -25,6 +28,7 @@
     "eslint": "^10.6.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
+    "gh-pages": "^6.3.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.63.0",
     "vite": "^8.1.1"
